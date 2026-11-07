@@ -1,1 +1,11 @@
 
+services:
+  - type: web
+    name: rc-tools-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+
